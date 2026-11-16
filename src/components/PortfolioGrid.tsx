@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { 
   Filter, 
   ExternalLink, 
@@ -13,7 +14,10 @@ import {
   Cpu, 
   Hospital,
   ChevronRight,
-  Sparkles
+  Sparkles,
+  TrendingUp,
+  MapPin,
+  Globe
 } from "lucide-react";
 import { PORTFOLIO_ITEMS, PortfolioItem } from "@/lib/data";
 
@@ -102,22 +106,41 @@ export default function PortfolioGrid() {
                 className="group bg-white rounded-3xl overflow-hidden border border-brand-border/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Visual Header / Mockup Banner */}
-                <div className="h-44 bg-gradient-to-br from-brand-charcoal to-[#1a1f26] p-5 flex flex-col justify-between relative overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-brand-charcoal to-[#1a1f26] p-5 flex flex-col justify-between relative overflow-hidden">
                   <div className="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-brand-red/20 blur-xl"></div>
                   
-                  <div className="flex items-center justify-between z-10">
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white/10 text-white backdrop-blur-md border border-white/15 flex items-center gap-1.5">
+                  <div className="flex items-center justify-between z-10 gap-2">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white/10 text-white backdrop-blur-md border border-white/15 flex items-center gap-1.5 shrink-0">
                       <CategoryIcon className="w-3.5 h-3.5 text-brand-red" />
                       {item.category}
                     </span>
-                    <span className="text-[10px] font-mono text-gray-400">ID: {item.id}</span>
+                    <div className="flex items-center gap-1.5 flex-wrap justify-end">
+                      {item.badge && (
+                        <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-brand-red text-white flex items-center gap-1 shadow-xs">
+                          <Sparkles className="w-3 h-3" />
+                          {item.badge}
+                        </span>
+                      )}
+                      {item.metrics && (
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 backdrop-blur-xs">
+                          <TrendingUp className="w-3 h-3" />
+                          {item.metrics}
+                        </span>
+                      )}
+                    </div>
                   </div>
 
                   <div className="z-10">
                     <span className="text-[10px] uppercase tracking-wider text-gray-300 block font-medium">
                       {item.clientType}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-teal-300 transition-colors line-clamp-2 mt-0.5">
+                    {item.location && (
+                      <span className="text-[11px] text-gray-400 flex items-center gap-1 mt-0.5">
+                        <MapPin className="w-3 h-3 text-brand-red shrink-0" />
+                        <span className="truncate">{item.location}</span>
+                      </span>
+                    )}
+                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-teal-300 transition-colors line-clamp-2 mt-1">
                       {item.title}
                     </h3>
                   </div>
@@ -143,18 +166,36 @@ export default function PortfolioGrid() {
                     </div>
                   </div>
 
-                  {/* View Project Action */}
-                  <div className="pt-4 border-t border-brand-border/50 flex items-center justify-between">
+                  {/* Card Actions */}
+                  <div className="pt-4 border-t border-brand-border/50 flex flex-wrap items-center justify-between gap-2">
                     <button
                       onClick={() => setActiveModalItem(item)}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-red hover:text-brand-darkred transition-colors"
+                      className="inline-flex items-center gap-1 text-xs font-bold text-brand-charcoal hover:text-brand-red transition-colors"
                     >
-                      <span>View Project Details</span>
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <span>Case Details</span>
+                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </button>
-                    <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
-                      Case Study
-                    </span>
+
+                    <div className="flex items-center gap-2">
+                      {item.liveUrl && (
+                        <a
+                          href={item.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-brand-red/10 hover:bg-brand-red text-brand-red hover:text-white text-[11px] font-bold transition-all border border-brand-red/20 hover:border-brand-red"
+                        >
+                          <Globe className="w-3 h-3" />
+                          <span>Visit Live Website</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                      <Link
+                        href="/contact"
+                        className="text-[11px] font-semibold text-brand-muted hover:text-brand-charcoal px-2 py-1 rounded hover:bg-brand-lightgrey transition-colors"
+                      >
+                        Inquire
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -177,18 +218,39 @@ export default function PortfolioGrid() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
                 <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-brand-softred text-brand-red">
                   {activeModalItem.category}
                 </span>
-                <span className="text-xs text-brand-muted font-medium">
-                  Client: {activeModalItem.clientType}
-                </span>
+                {activeModalItem.badge && (
+                  <span className="px-2.5 py-1 rounded-full text-xs font-extrabold bg-brand-red text-white flex items-center gap-1 shadow-xs">
+                    <Sparkles className="w-3 h-3" />
+                    {activeModalItem.badge}
+                  </span>
+                )}
+                {activeModalItem.metrics && (
+                  <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1">
+                    <TrendingUp className="w-3.5 h-3.5 text-emerald-700" />
+                    {activeModalItem.metrics}
+                  </span>
+                )}
               </div>
 
-              <h3 className="text-2xl font-extrabold text-brand-charcoal tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-brand-charcoal tracking-tight mt-1">
                 {activeModalItem.title}
               </h3>
+
+              <div className="mt-2 text-xs text-brand-muted space-y-0.5">
+                <div>
+                  <span className="font-semibold text-brand-charcoal">Client / Practice:</span> {activeModalItem.clientType}
+                </div>
+                {activeModalItem.location && (
+                  <div className="flex items-center gap-1.5 text-brand-muted">
+                    <MapPin className="w-3.5 h-3.5 text-brand-red shrink-0" />
+                    <span>{activeModalItem.location}</span>
+                  </div>
+                )}
+              </div>
 
               <div className="mt-5 space-y-4 text-xs sm:text-sm">
                 <div className="p-4 rounded-2xl bg-brand-lightgrey border border-brand-border/50">
@@ -242,13 +304,30 @@ export default function PortfolioGrid() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-brand-border/60 flex items-center justify-between">
-                <span className="text-xs text-brand-muted">
-                  Case study verified by MedsTech Quality Assurance
-                </span>
+              <div className="mt-8 pt-5 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-2">
+                  {activeModalItem.liveUrl && (
+                    <a
+                      href={activeModalItem.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 rounded-xl bg-brand-red hover:bg-brand-darkred text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-brand-red/20 transition-all hover:scale-105"
+                    >
+                      <Globe className="w-3.5 h-3.5" />
+                      <span>Visit Live Website</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                  <Link
+                    href="/contact"
+                    className="px-4 py-2.5 rounded-xl bg-brand-softred text-brand-red hover:bg-brand-red hover:text-white border border-brand-red/30 text-xs font-bold transition-all"
+                  >
+                    Inquire About Solution
+                  </Link>
+                </div>
                 <button
                   onClick={() => setActiveModalItem(null)}
-                  className="px-5 py-2 rounded-xl bg-brand-charcoal text-white text-xs font-semibold hover:bg-brand-darker transition-colors"
+                  className="px-5 py-2.5 rounded-xl bg-brand-charcoal text-white text-xs font-semibold hover:bg-brand-darker transition-colors"
                 >
                   Close Case Study
                 </button>

@@ -33,6 +33,10 @@ export interface PortfolioItem {
   title: string;
   category: "Doctor Websites" | "Clinical Software" | "Hospital Software" | "Android Applications" | "iOS Applications" | "Healthcare Automation" | "Research Projects";
   clientType: string;
+  location?: string;
+  badge?: string;
+  metrics?: string;
+  liveUrl?: string;
   description: string;
   challenge: string;
   solution: string;
@@ -558,6 +562,56 @@ export const DEVELOPMENT_PROCESS = [
 ];
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
+  {
+    id: "dr-radhamadhab-sahu",
+    title: "Dr. Radhamadhab Sahu — Senior ENT & Skull Base Surgeon",
+    category: "Doctor Websites",
+    clientType: "Dr. Radhamadhab Sahu (SUM Ultimate Medicare)",
+    location: "Kalinga Nagar & SUM Ultimate Medicare, Bhubaneswar",
+    badge: "Top Pick",
+    metrics: "+220% Consultations",
+    liveUrl: "https://dr-radhamadhab-sahu.vercel.app/",
+    description:
+      "Official surgical practice and clinical portal for Dr. Radhamadhab Sahu, Senior Consultant & HOD of ENT & Skull Base Surgery at SUM Ultimate Medicare and founder of E.N.T. & Cancer Super-Speciality Clinic.",
+    challenge:
+      "Patients across Odisha and Eastern India required a high-authority digital portal to verify surgical qualifications, access post-operative care guides, and navigate dual-center OPD consultation schedules between SUM Ultimate Medicare and private clinics.",
+    solution:
+      "Architected a specialized surgical clinical portal with dual-center OPD scheduling, verified residency and fellowship credentials (VMMC & Safdarjung Hospital, New Delhi), interactive surgical treatment guides, and 1-tap emergency telephonic triage with WhatsApp booking.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Medical Authority Schema", "Vercel"],
+    features: [
+      "Dual-center OPD scheduling (SUM Ultimate Medicare & Ghatikia Super-Speciality Clinic)",
+      "Verified residency credentials (VMMC & Safdarjung Hospital, New Delhi)",
+      "Interactive digital patient education brochure & surgical treatment guides",
+      "Instant 1-tap emergency telephonic triage & WhatsApp consultation booking",
+    ],
+    imagePlaceholder: "skull-base-surgery",
+    demoAvailable: true,
+  },
+  {
+    id: "satyabhama-healthcare",
+    title: "SatyaBhama Healthcare — Multispecialty Clinic & Doctor Directory",
+    category: "Clinical Software",
+    clientType: "Satyabhama Health Care",
+    location: "Nehru Stadium Road, Bhadrak, Odisha",
+    badge: "Multispecialty",
+    metrics: "+220% Patient Inquiries",
+    liveUrl: "https://satyabhamahealthcare.in/",
+    description:
+      "Official multispecialty clinic portal and verified doctor consultation directory for Satyabhama Health Care, located at Nehru Stadium Road near Bonth Chhak, Bhadrak, Odisha.",
+    challenge:
+      "Patients in Bhadrak district lacked a centralized, real-time schedule of visiting specialists across ENT, Orthopedics, Medicine, and Surgery, causing clinic congestion and missed appointments.",
+    solution:
+      "Built a lightning-fast clinic directory and inquiry routing system with verified specialist rosters, 1-tap reception dialing, local SEO schema, and Nehru Stadium Road Google Maps integration delivered on Cloudflare Edge.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Cloudflare Workers", "Medical Schema"],
+    features: [
+      "Verified specialist doctor roster & consultation timings (ENT, Ortho, Medicine, Surgery)",
+      "1-Tap clinic reception calling & instant query routing",
+      "Local Bhadrak healthcare SEO schema & Nehru Stadium Road Google Maps integration",
+      "Ultra-fast Cloudflare Edge & Next.js delivery with patient-first responsive UI",
+    ],
+    imagePlaceholder: "multispecialty-clinic",
+    demoAvailable: true,
+  },
   {
     id: "port-01",
     title: "Apex Heart & Vascular Institute Portal",
