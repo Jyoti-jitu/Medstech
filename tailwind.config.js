@@ -9,14 +9,17 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          red: "#C90016",
-          darkred: "#A50012",
+          red: "#20B2AA",
+          darkred: "#178F89",
           charcoal: "#20242B",
           darker: "#171A20",
           lightgrey: "#F5F6F8",
-          softred: "#FFF1F2",
+          softred: "#E8F8F7",
           border: "#E2E5EB",
           muted: "#6B7280",
+          teal: "#20B2AA",
+          darkteal: "#178F89",
+          softteal: "#E8F8F7",
         },
       },
       fontFamily: {
@@ -25,8 +28,9 @@ module.exports = {
       },
       boxShadow: {
         card: "0 4px 20px -2px rgba(32, 36, 43, 0.06), 0 2px 6px -1px rgba(32, 36, 43, 0.04)",
-        "card-hover": "0 14px 34px -4px rgba(201, 0, 22, 0.12), 0 8px 16px -2px rgba(32, 36, 43, 0.08)",
-        "glow-red": "0 0 25px -3px rgba(201, 0, 22, 0.35)",
+        "card-hover": "0 14px 34px -4px rgba(32, 178, 170, 0.18), 0 8px 16px -2px rgba(32, 36, 43, 0.08)",
+        "glow-red": "0 0 25px -3px rgba(32, 178, 170, 0.35)",
+        "glow-teal": "0 0 25px -3px rgba(32, 178, 170, 0.35)",
         header: "0 2px 15px rgba(32, 36, 43, 0.04)",
       },
       animation: {

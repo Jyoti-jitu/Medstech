@@ -117,7 +117,7 @@ export default function PortfolioGrid() {
                     <span className="text-[10px] uppercase tracking-wider text-gray-300 block font-medium">
                       {item.clientType}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-red-300 transition-colors line-clamp-2 mt-0.5">
+                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-teal-300 transition-colors line-clamp-2 mt-0.5">
                       {item.title}
                     </h3>
                   </div>

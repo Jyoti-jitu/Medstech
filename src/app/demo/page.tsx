@@ -502,7 +502,7 @@ export default function DemoPage() {
                     onClick={() => toggleBedStatus(bed.id)}
                     className={`p-4 rounded-2xl border text-left cursor-pointer transition-all hover:scale-102 select-none ${
                       isOccupied
-                        ? "bg-red-50/80 border-red-200"
+                        ? "bg-brand-softred/80 border-brand-red/30"
                         : isAvail
                         ? "bg-emerald-50/80 border-emerald-200"
                         : "bg-amber-50/80 border-amber-200"

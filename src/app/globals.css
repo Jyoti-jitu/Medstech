@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --brand-red: #C90016;
-    --brand-darkred: #A50012;
+    --brand-red: #20B2AA;
+    --brand-darkred: #178F89;
     --brand-charcoal: #20242B;
     --brand-darker: #171A20;
     --brand-lightgrey: #F5F6F8;
-    --brand-softred: #FFF1F2;
+    --brand-softred: #E8F8F7;
   }
 
   html {
@@ -40,7 +40,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C90016;
+  background: #20B2AA;
 }
 
 /* Medical grid background patterns */
@@ -52,12 +52,12 @@
 }
 
 .bg-dots-pattern {
-  background-image: radial-gradient(rgba(201, 0, 22, 0.12) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(32, 178, 170, 0.15) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
 }
 
 .bg-radial-gradient {
-  background: radial-gradient(circle at 50% 0%, rgba(201, 0, 22, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(32, 178, 170, 0.10) 0%, transparent 70%);
 }
 
 /* ECG Pulse Animation */

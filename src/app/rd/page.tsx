@@ -113,7 +113,7 @@ export default function RDPage() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red/15 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red/20 text-red-300 border border-brand-red/40 mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red/20 text-teal-300 border border-brand-red/40 mb-4">
               <Cpu className="w-4 h-4 text-brand-red" />
               MedsTech Research & Development Division
             </div>

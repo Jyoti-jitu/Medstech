@@ -246,7 +246,7 @@ export default function AdminPage() {
           </Link>
           <button
             onClick={() => setIsAuthenticated(false)}
-            className="text-xs text-red-300 hover:text-white px-3 py-1.5 rounded-lg bg-brand-red/20 hover:bg-brand-red transition-colors flex items-center gap-1.5"
+            className="text-xs text-teal-300 hover:text-white px-3 py-1.5 rounded-lg bg-brand-red/20 hover:bg-brand-red transition-colors flex items-center gap-1.5"
           >
             <LogOut className="w-3.5 h-3.5" />
             <span>Sign Out</span>
@@ -273,7 +273,7 @@ export default function AdminPage() {
               <div className="text-xs font-bold uppercase tracking-wider text-brand-muted">New Uncontacted</div>
               <div className="text-2xl font-extrabold text-brand-red mt-1">{newCount}</div>
             </div>
-            <div className="w-10 h-10 rounded-2xl bg-red-100 text-brand-red flex items-center justify-center">
+            <div className="w-10 h-10 rounded-2xl bg-brand-softred text-brand-red flex items-center justify-center">
               <Clock className="w-5 h-5" />
             </div>
           </div>
@@ -446,7 +446,7 @@ export default function AdminPage() {
                           onChange={(e) => handleStatusChange(item.id, e.target.value as any)}
                           className={`text-xs font-bold px-2.5 py-1 rounded-lg border focus:outline-none ${
                             item.status === "New"
-                              ? "bg-red-50 text-brand-red border-red-200"
+                              ? "bg-brand-softred text-brand-red border-brand-red/30"
                               : item.status === "Contacted"
                               ? "bg-yellow-50 text-amber-800 border-yellow-200"
                               : item.status === "In Review"

@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="max-w-2xl text-center md:text-left">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-red/20 text-red-300 border border-brand-red/30 mb-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-red/20 text-teal-300 border border-brand-red/30 mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
                 Partner in Healthcare Innovation
               </span>

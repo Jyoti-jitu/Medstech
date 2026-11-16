@@ -41,13 +41,13 @@ The platform is running on `http://localhost:3000`:
 
 ## 🎨 Brand Identity & Design System
 
-- **Primary Red:** `#C90016`
-- **Deep Red:** `#A50012`
+- **Primary Teal:** `#20B2AA` (Light Sea Green)
+- **Deep Teal:** `#178F89`
 - **Pure White:** `#FFFFFF`
 - **Charcoal Black:** `#20242B`
 - **Darker Charcoal:** `#171A20`
 - **Light Grey:** `#F5F6F8`
-- **Soft Red:** `#FFF1F2`
+- **Soft Teal Tint:** `#E8F8F7`
 
 ---
 
