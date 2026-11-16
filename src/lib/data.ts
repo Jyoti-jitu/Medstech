@@ -37,6 +37,7 @@ export interface PortfolioItem {
   badge?: string;
   metrics?: string;
   liveUrl?: string;
+  liveUrlLabel?: string;
   description: string;
   challenge: string;
   solution: string;
@@ -610,6 +611,84 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Ultra-fast Cloudflare Edge & Next.js delivery with patient-first responsive UI",
     ],
     imagePlaceholder: "multispecialty-clinic",
+    demoAvailable: true,
+  },
+  {
+    id: "dr-sandeep-panigrahi",
+    title: "Prof. Dr. Sandeep Kumar Panigrahi — Physician & Academic Profile",
+    category: "Doctor Websites",
+    clientType: "Prof. Dr. Sandeep Kumar Panigrahi (IMS & SUM Hospital)",
+    location: "Bhubaneswar, Odisha",
+    badge: "Senior Faculty",
+    metrics: "+160% Patient Inquiries",
+    liveUrl: "https://dr-sandeep-panigrahi.jspbp2005.workers.dev/",
+    liveUrlLabel: "Visit Live Website",
+    description:
+      "Official academic, clinical, and patient consultation digital platform for Prof. Dr. Sandeep Kumar Panigrahi (MBBS, MD, Fellowship in Diabetes - UK), Senior Physician and Professor of Community Medicine at IMS & SUM Hospital, SOA University.",
+    challenge:
+      "Patients and medical scholars required an authoritative single-source portal to verify academic research publications, fellowship credentials in diabetes, and access multi-chamber consultation schedules.",
+    solution:
+      "Engineered an ultra-fast Cloudflare Edge portal featuring verified academic citations, diabetes consultation guides, multi-chamber OPD schedules, and high-ranking local physician SEO schema.",
+    technologies: ["Next.js", "React", "Cloudflare Workers", "Tailwind CSS", "Medical Schema"],
+    features: [
+      "Verified medical credentials (MBBS, MD, UK Fellowship) and academic research",
+      "Multi-chamber OPD schedule (IMS & SUM Hospital) and teleconsultations",
+      "Mobile-optimized responsive design with fast Cloudflare Edge delivery",
+      "Doctor schema markup for Google Search authority & local discovery",
+    ],
+    imagePlaceholder: "physician-profile",
+    demoAvailable: true,
+  },
+  {
+    id: "dr-abhishek-anand",
+    title: "Dr. Abhishek Anand — Paediatric Surgeon & Urology Specialist",
+    category: "Doctor Websites",
+    clientType: "Dr. Abhishek Anand (New Life Clinic)",
+    location: "Soubhagya Nagar, Bhubaneswar",
+    badge: "Paediatric Specialty",
+    metrics: "+175% Family Inquiries",
+    liveUrl: "https://dr-abhishek-anand.vercel.app/",
+    liveUrlLabel: "Visit Live Website",
+    description:
+      "Specialist clinical platform and patient education portal for Dr. Abhishek Anand, premier Paediatric Surgeon & Paediatric Urologist practicing at New Life Clinic, Soubhagya Nagar, Bhubaneswar.",
+    challenge:
+      "Parents facing complex pediatric surgical diagnoses needed clear, reassuring, evidence-based procedure guides, clinic directions, and direct emergency consultation channels for their children.",
+    solution:
+      "Designed a child-friendly, evidence-based pediatric surgical portal with procedure guides for parents, Google Maps directions to Soubhagya Nagar clinic, and 1-click WhatsApp triage.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "WhatsApp Cloud API", "Vercel"],
+    features: [
+      "Evidence-based pediatric surgery guides for parents & consultation questions",
+      "Child-friendly clinic overview & Google Maps navigation for Soubhagya Nagar",
+      "1-Click direct WhatsApp appointment request with priority triage",
+      "Pediatric surgery & neonatal healthcare SEO schema for Odisha discovery",
+    ],
+    imagePlaceholder: "paediatric-surgery",
+    demoAvailable: true,
+  },
+  {
+    id: "medixcare-clinic-erp",
+    title: "MedixCare — Clinic Operations & EHR Management System",
+    category: "Clinical Software",
+    clientType: "Regional Diagnostics & Polyclinic",
+    location: "Bhubaneswar, Odisha",
+    badge: "Clinic ERP",
+    metrics: "80% Less Paperwork",
+    liveUrl: "https://forecastearthings.com/",
+    liveUrlLabel: "Explore System Details",
+    description:
+      "Custom healthcare ERP software centralizing digital prescriptions, patient Electronic Health Records (EHR), billing with GST, and diagnostic lab test tracking.",
+    challenge:
+      "Overburdened receptionists and doctors handling physical prescription pads, manual billing reconciliations, lost paper lab results, and disorganized patient medical histories.",
+    solution:
+      "Engineered MedixCare: a streamlined clinic ERP with intelligent prescription generation, centralized patient timelines, GST invoice printing, and role-based staff access.",
+    technologies: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    features: [
+      "Digital prescription creator with drug database shortcuts",
+      "Patient health record timeline and attachment storage",
+      "GST-compliant billing, receipt printing & cash drawer tracking",
+      "Doctor and receptionist role permissions with audit logging",
+    ],
+    imagePlaceholder: "clinic-erp",
     demoAvailable: true,
   },
   {

@@ -185,7 +185,7 @@ export default function PortfolioGrid() {
                           className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-brand-red/10 hover:bg-brand-red text-brand-red hover:text-white text-[11px] font-bold transition-all border border-brand-red/20 hover:border-brand-red"
                         >
                           <Globe className="w-3 h-3" />
-                          <span>Visit Live Website</span>
+                          <span>{item.liveUrlLabel || "Visit Live Website"}</span>
                           <ExternalLink className="w-3 h-3" />
                         </a>
                       )}
@@ -314,7 +314,7 @@ export default function PortfolioGrid() {
                       className="px-4 py-2.5 rounded-xl bg-brand-red hover:bg-brand-darkred text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-brand-red/20 transition-all hover:scale-105"
                     >
                       <Globe className="w-3.5 h-3.5" />
-                      <span>Visit Live Website</span>
+                      <span>{activeModalItem.liveUrlLabel || "Visit Live Website"}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}
